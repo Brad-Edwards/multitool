@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using System;
 using System.Security.Cryptography;
 
 namespace com.atomiklabs.multitool.Data
@@ -8,17 +8,27 @@ namespace com.atomiklabs.multitool.Data
         /// <summary>
         /// The set of alphabetic characters.
         /// </summary>
-        private const string _alphaChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private const string AlphaChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         /// <summary>
         /// The set of alpha-numeric characters.
         /// </summary>
-        private const string _alphaNumericChars = _alphaChars + _numericChars;
+        private const string AlphaNumericChars = AlphaChars + NumericChars;
 
         /// <summary>
         /// The set of numeric characters.
         /// </summary>
-        private const string _numericChars = "1234567890";
+        private const string NumericChars = "1234567890";
+
+        /// <summary>
+        /// The set of characters for passwords.
+        /// </summary>
+        private const string PasswordChars = AlphaChars + NumericChars + SpecialChars;
+
+        /// <summary>
+        /// The set of password special characters.
+        /// </summary>
+        private const string SpecialChars = @" !""#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
         /// <summary>
         /// Generates cryptographically secure random bytes.
@@ -34,13 +44,27 @@ namespace com.atomiklabs.multitool.Data
         }
 
         /// <summary>
-        /// Creates a random string.
+        /// Creates a random alphanumeric string.
         /// </summary>
         /// <returns></returns>
         public static string GetRandomString()
         {
-            var random = new System.Random();
-            return new string(Enumerable.Repeat(_alphaNumericChars, 6).Select(s => s[random.Next(s.Length)]).ToArray());
+            throw new NotImplementedException();
+        }
+
+        public static string GetRandomAlphaString()
+        {
+            throw new NotImplementedException();
+        }
+
+        public static string GetRandomNumericString()
+        {
+            throw new NotImplementedException();
+        }
+
+        public static string GetRandomPasswordString()
+        {
+            throw new NotImplementedException();
         }
     }
 }
