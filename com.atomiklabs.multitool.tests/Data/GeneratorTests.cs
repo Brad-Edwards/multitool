@@ -7,6 +7,18 @@ using System.Linq;
 
 namespace com.atomiklabs.multitool.Data.Tests
 {
+    /// <summary>
+    /// Tests for the <see cref="Generator"/> class.
+    /// </summary>
+    /// <remarks>
+    /// These tests do not check the degree of randomness of the strings.
+    /// 
+    /// Modifications will be required every time a new group of characters is
+    /// added to <see cref="Generator"/>.
+    /// 
+    /// This is not high risk code at the moment, so the test effort is low.
+    /// This will need revisiting if Generator becomes key to anything important.
+    /// </remarks>
     [TestFixture()]
     public class GeneratorTests
     {
