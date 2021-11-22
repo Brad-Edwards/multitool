@@ -6,6 +6,9 @@ using System.Text;
 
 namespace com.atomiklabs.multitool.Data.Tests
 {
+    /// <summary>
+    /// Tests for the <see cref="StringFormatter"/> class.
+    /// </summary>
     [TestFixture()]
     public class StringFormatterTests
     {
